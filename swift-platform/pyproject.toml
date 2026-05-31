@@ -1,0 +1,28 @@
+ [project]
+ name = "swift-platform"
+ version = "1.1.0"
+ description = "SwiftPlatform backend (FastAPI + SQLAlchemy async + RBAC + Workflow Engine)"
+ readme = "README.md"
+ requires-python = ">=3.10"
+ dependencies = [
+   "fastapi>=0.110",
+   "uvicorn[standard]>=0.27",
+   "sqlalchemy[asyncio]>=2.0",
+   "asyncpg>=0.29",
+   "alembic>=1.13",
+   "pydantic>=2.6",
+   "pydantic-settings>=2.2",
+   "python-jose[cryptography]>=3.3",
+   "passlib[bcrypt]>=1.7.4",
+   "python-multipart>=0.0.9",
+ ]
+ 
+ [tool.ruff]
+ line-length = 100
+
+[dependency-groups]
+dev = [
+    "black>=26.5.1",
+    "httpx>=0.28.1",
+]
+ 
